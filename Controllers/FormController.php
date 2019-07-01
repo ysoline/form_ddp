@@ -5,8 +5,8 @@ include('Models/Manager/FormManager.php');
     {
         public function listForm()
         {
-            $forms = new FormManager();
-            $forms -> getForm();
+            $lforms = new FormManager();
+            $lforms -> getForm();
             require('Views/indexView.php');
         }
 
@@ -21,7 +21,7 @@ include('Models/Manager/FormManager.php');
             }
             else
             {
-                header('Locaton: ../index.php');
+                header('Location: index.php');
             }
 
         }

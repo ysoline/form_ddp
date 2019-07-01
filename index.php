@@ -1,5 +1,5 @@
 <?php 
-require_once('Views/indexView.php');
+
 require_once('Controllers/FormController.php');
 
 try{
@@ -22,7 +22,12 @@ try{
             
         }
     }
+    else{
+        $forms = new FormController();
+        $forms -> listForm();
+    }
 }
+
 catch(Exception $e){
     $errorMessage =$e->getMessage();
     require('Views/error.php');
